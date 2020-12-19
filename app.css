@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+
+#input,
+#output {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#input p,
+#output p {
+    margin: 5px 0 0 0;
+}
+
+#output h1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    margin: 0;
+}
+
+textarea {
+    flex-grow: 1;
+    resize: none;
+    margin-top: calc(0.35em + 2px);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}

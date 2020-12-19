@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Text</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="stylesheet" href="app.css" />
+    </head>
+    <body>
+        <div id="transformations">
+            <h1>Commands</h1>
+            <form id="controls">
+                <fieldset>
+                    <legend>Add</legend>
+                    <label>
+                        Prefix
+                        <input type="text" name="add-prefix" />
+                    </label>
+                    <label>
+                        Suffix
+                        <input type="text" name="add-suffix" />
+                    </label>
+                    <label>
+                        Insert
+                        <input type="text" name="add-insert" />
+                    </label>
+                    <label>
+                        At
+                        <input type="number" name="add-insert-pos" step="1" />
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Replace</legend>
+                    <label>
+                        Replace
+                        <input type="text" name="replace-before" />
+                    </label>
+                    <label>
+                        With
+                        <input type="text" name="replace-after" />
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Case</legend>
+                    <label>
+                        <input type="radio" name="case-change" value="keep" checked />
+                        Keep
+                    </label>
+                    <label>
+                        <input type="radio" name="case-change" value="lower" />
+                        Lower
+                    </label>
+                    <label>
+                        <input type="radio" name="case-change" value="upper" />
+                        Upper
+                    </label>
+                    <label>
+                        <input type="radio" name="case-change" value="toggle" />
+                        Toggle
+                    </label>
+                    <label>
+                        <input type="radio" name="case-change" value="title" />
+                        Title
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Sort</legend>
+                    <label>
+                        <input type="radio" name="sort-dir" value="keep" checked />
+                        Keep
+                    </label>
+                    <label>
+                        <input type="radio" name="sort-dir" value="asc" />
+                        Ascending
+                    </label>
+                    <label>
+                        <input type="radio" name="sort-dir" value="desc" />
+                        Descending
+                    </label>
+                    <label>
+                        <input type="radio" name="sort-dir" value="random" />
+                        Random
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Filter</legend>
+                    <label>
+                        <input type="checkbox" name="filter-ignore-case-yn" value="y" />
+                        Ignore case
+                    </label>
+                    <label>
+                        <input type="radio" name="filter" value="keep" checked />
+                        Keep
+                    </label>
+                    <label>
+                        <input type="radio" name="filter" value="deduplicate" />
+                        Deduplicate
+                    </label>
+                    <label>
+                        <input type="radio" name="filter" value="unique" />
+                        Unique
+                    </label>
+                    <label>
+                        <input type="radio" name="filter" value="duplicates" />
+                        Duplicates
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        <label><input type="checkbox" name="csv-yn" value="y" />CSV</label>
+                    </legend>
+                    <label>
+                        Separator
+                        <input type="text" name="csv-separator" />
+                    </label>
+                    <label>
+                        Extract column
+                        <input type="number" name="csv-extract-column" step="1" />
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        <label><input type="checkbox" name="merge-yn" value="y" />Merge</label>
+                    </legend>
+                    <label>
+                        Separator
+                        <input type="text" name="merge-separator" />
+                    </label>
+                </fieldset>
+                <button type="reset">Reset</button>
+            </form>
+        </div>
+        <div id="input">
+            <h1>Input</h1>
+            <textarea id="input-textarea"></textarea>
+            <p id="input-line-count"></p>
+        </div>
+        <div id="output">
+            <h1>Output<button type="button" id="use-output-as-input">Use as input</button></h1>
+            <textarea id="output-textarea"></textarea>
+            <p id="output-line-count"></p>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
